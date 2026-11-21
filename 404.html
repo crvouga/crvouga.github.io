@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Moved</title>
+<script>
+  // Project sites moved from this account to the crvouga-organization org.
+  // Forward /<repo>/<rest> to the same path there, keeping query and hash.
+  var moved = ["gig-log", "match-three"];
+  var parts = location.pathname.split("/");
+  var repo = (parts[1] || "").toLowerCase();
+  location.replace(moved.indexOf(repo) >= 0
+    ? "https://crvouga-organization.github.io" + location.pathname + location.search + location.hash
+    : "https://github.com/crvouga");
+</script>
+</head>
+<body><p>Moved to <a href="https://crvouga-organization.github.io/">crvouga-organization.github.io</a>.</p></body>
+</html>
